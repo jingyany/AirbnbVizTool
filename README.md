@@ -2,6 +2,11 @@
 
 ## I. Background
 
+Airbnb is an online community marketplace that connects people looking to rent their homes with people who are looking for accommodations. Airbnb users include hosts and travelers: hosts list and rent out their unused spaces, and travelers search for and book accommodations in 192 countries worldwide. 
+
+This project aims to analyze the listing data of airbnb to adress some business problems related to Airbnb. When travelers plan to book a place on Airbnb, they will consider the location, room types, pricing, host introduction, reviews from other guests and availability of the place. We will use cutting edge techniques like machine learning models and data visualization to address guests' questions like what factors influence the listing price most? what will be the estimated price per night and availability during holidays like christmas or thanksgiving? will weather be a factor to influence the listing price? Which area has higher listing price? Instead of looking for those information by clicking on each listing, guests can look at our data visualization and find all informations they need before booking a place to stay.
+
+
 ## II. Users
 
 ## III. Use Cases
@@ -45,3 +50,7 @@
 **(1) Feature Inputs**
 
 **(2) Estimate Start Button**
+
+
+References:
+Folger, Jean. "The Pros and Cons of Using Airbnb." Investopedia. N.p., 06 Mar. 2017. Web. 11 May 2017.

@@ -9,6 +9,38 @@ This project aims to analyze the listing data of airbnb to adress some business 
 
 ## II. Users
 
+### Target User:  
+
+our target users are the guests of Airbnb who interested in 
+
+1. understanding how  the price per night comes up with different factors 
+
+2. comparing prices within different areas on the map 
+
+3. interacting with our visualization tool to explore more information they want
+
+### Computer experience require:  
+
+1.The users should know how to select or click a button on Computer 
+
+2.The users should know  Zoom, Hover and Select Tool on map view
+
+3.The users should better has experiences of using any visualization tool before 
+
+4.The users should have Python experience if they wanted to uderstanding our coding part 
+
+### Domain knowledge : 
+
+1.The users should have some knowledge on Linear Regression if they were interesting on understanding which facotrs influence price most 
+
+2. The users should have expereince with Machin learning Model and Python if they were interesting on understanding how we select features and how we fit the models 
+
+
+### Users' Benefit: 
+
+The users could see which factors influence the price most , and predicting the price per night base on their own preference. For example, The users could compare the price between holiday and non-holiday and then make decision by their budget. Also, The Users could have idea which areas have higher price and which areas have lower idea and this could also help them make decision by their budget. 
+
+
 ## III. Use Cases
 
 ### Overview:
@@ -81,7 +113,6 @@ The most relevant features to pricing predictions will be listed in this field, 
 **(2) Estimate Start Button**
 
 Clicking the button will put all inputs in Feature Inputs area into a machine learning model, and run out an estimate rent price for users to consider about.
-
 
 
 

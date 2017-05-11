@@ -13,11 +13,11 @@ This project aims to analyze the listing data of airbnb to adress some business 
 
 our target users are the guests of Airbnb who interested in 
 
-1. understanding how  the price per night comes up with different factors 
+1.understanding how  the price per night comes up with different factors 
 
-2. comparing prices within different areas on the map 
+2.comparing prices within different areas on the map 
 
-3. interacting with our visualization tool to explore more information they want
+3.interacting with our visualization tool to explore more information they want
 
 ### Computer experience require:  
 
@@ -33,7 +33,7 @@ our target users are the guests of Airbnb who interested in
 
 1.The users should have some knowledge on Linear Regression if they were interesting on understanding which facotrs influence price most 
 
-2. The users should have expereince with Machin learning Model and Python if they were interesting on understanding how we select features and how we fit the models 
+2.The users should have expereince with Machin learning Model and Python if they were interesting on understanding how we select features and how we fit the models 
 
 
 ### Users' Benefit: 

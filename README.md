@@ -19,7 +19,7 @@ This project aims to analyze the listing data of airbnb to adress some business 
 
 **(1) Pan Tool**
 
-Activating the pan tool allows the user to pan the map by left-dragging a mouse or dragging a finger across the map region.
+Activating the pan tool allows the users to pan the map by left-dragging a mouse or dragging a finger across the map region.
 
 
 **(2) Reset Tool**
@@ -75,7 +75,7 @@ Rent Price Histogram and Customer Rating Histogram shows distribution of each ne
 
 **(1) Feature Inputs**
 
-Allow users to input the features of the place they desired into the white box. 
+The most relevant features to pricing predictions will be listed in this field, which allows users to select the features they desired and input the range of a specific featur.
 
 
 **(2) Estimate Start Button**

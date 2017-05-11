@@ -66,7 +66,7 @@ Clicking a single point on map will show the selected host’s detailed informat
 
 (4) Rent Price Histogram and Customer Rating Histogram: shows distribution of each host’s rent price and customer rating filtered with conditions users made in Selection Area, colors out the selected host in the histogram. It allows users to compare the selected host with other hosts that have the same room type in the same neighborhood. 
 
-### 4. Selected Condition Statistic Analysis
+### 4. Selected Neighbourhood with Room Type Filter Statistic Analysis
 
 Rent Price Histogram and Customer Rating Histogram shows distribution of each neighbourhood’s average rent price and average customer rating filtered with room type condition users made in Selection Area, colors out the selected neighbourhood in the histogram. It allows users to compare the selected neighbourhood with other neighbourhoods in Seattle that have the same room type.
 

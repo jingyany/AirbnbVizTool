@@ -6,19 +6,19 @@ We have two components in our Machine Learning Model part, they are Price Predic
 
 For Price Predicting, we will compare the accuracy of using Ridge Regression with gradient descent, Lasso regression with coordinate descent and Elastic Net Regularization, and We will select the better one to use as our price predicting model. 
 
-Ridge Regression: 
+##Ridge Regression: 
 
 Advantage:  was the most popular technique for improving prediction accuracy. Ridge regression improves prediction error by shrinking large regression coefficients in order to reduce overfitting. Ridge Regression are good at prediction accuracy. 
 
 Disadvantage: Ridge cannot zero coefficients. Thus, it does not perform covariate selection and therefore does not help to make the model more interpretable.
 
-Lasso Regression: 
+##Lasso Regression: 
 
 Advantage: Lasso is able to achieve both prediction accuracy and covariate selection by forcing the sum of the absolute value of the regression coefficients to be less than a fixed value, which forces certain coefficients to be set to zero, effectively choosing a simpler model that does not include those coefficients which makes mode more interpretable. 
 
 Disadvantage:  It may ignore some covariates which are highly correlated. Lasso can not do group selection. If there is a group of variables among which the pairwise correlations are very high, then the LASSO tends to arbitrarily select only one variable from the group. 
 
-Elastic-Net Regularization:
+##Elastic-Net Regularization:
 
 Advantage: I t is hybrid of lasso and ridge regression.  It is trained with L1 and L2 prior regularize. The advantage of trading off between Lasso and Ridge is, it allows Elastic-Net to inherit some of Ridge’s stability under rotation. It solve the drawback of Lasso and Ridge, while including each as special cases. 
 

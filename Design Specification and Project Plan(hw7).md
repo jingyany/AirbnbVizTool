@@ -90,7 +90,7 @@ Scikit-learn is a powerful machine learning library for Python. It features vari
 
 #### Component Specification:
 
-#####Sub-component1: Sentiment Score of Reviews
+##### Sub-component1: Sentiment Score of Reviews
 
 name: SentimentOfReviews
 
@@ -100,7 +100,7 @@ Input: review, a sentence string
 
 Output: sentiment score, a float
 
-#####Sub-component2: Number of Review per listing
+##### Sub-component2: Number of Review per listing
 
 name: CountReviews
 
@@ -110,7 +110,7 @@ Input: Listing id, an int
 
 Output: count, an int
 
-#####Sub-component3: Length of Review
+##### Sub-component3: Length of Review
 
 name: LengthOfReview
 
@@ -140,7 +140,7 @@ You should have a subsection here for each use case in your functional specifica
 - Scatter plot of predicted price according to the housing amenities.
 - Scatter plot of predicted price according to the room type.
 
-#### use cases under component 2 (text analysis of reviews)
+#### User cases under component 2 (text analysis of reviews)
 - Scatter plot of listing price and the sentiment score.
 Use the result, sentiment score, from Sub-component1 and pricing to create a scatter plot. User can visualize the relationship between review and listing's price
 - Scatter plot of listing price and the number of reviews per listing.

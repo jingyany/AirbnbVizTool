@@ -1,14 +1,75 @@
+# Design Specification and Project Plan
+
 ## Part 1: Components
 This section should list the components that you expect to have in your project (not necessarily a complete list), what they do, and how their interfaces (e.g., functions with inputs and outputs). If the component is an existing package, then you should point to a documentation for the package. If the component is something that you'll build, then describe (maybe at a high level) the functions and their inputs and outputs.
 
+### Componenet 1: Interactive Map
 
-### Componenet 1: Pricing Prediction
+##### Sub-component 1: View of Each Single Host
+
+This sub-component shows an interactive map that plot each single host. In the Map Area, users can drag the map, zoom in or out using wheels on mouse, or move cursor on point to see the host's detailed information such as address, number of bedrooms, number of bathrooms etc. In the Filters Area, users can add filters to hosts, for example: choose to see hosts with room type of Private Room etc.
+
+**Map Area:**
+
+(1) Pan Tool
+
+Activating the pan tool allows the users to pan the map by left-dragging a mouse or dragging a finger across the map region.
+
+This is a build-in tool of Bokeh package. To see documentation of this tool, please click [here](http://bokeh.pydata.org/en/latest/_modules/bokeh/models/tools.html#Drag)
+
+(2) Reset Tool
+
+Clicking the reset tool button allows users to restore the map to the original view.
+
+This is a build-in tool of Bokeh package. To see documentation of this tool, please click [here](http://bokeh.pydata.org/en/latest/_modules/bokeh/models/tools.html#Drag)
+
+
+(3) Wheel Zoom Tool
+
+Activating the wheel zoom tool allows users to zoom the map in and out, centered on the current mouse location.
+
+This is a build-in tool of Bokeh package. To see documentation of this tool, please click [here](http://bokeh.pydata.org/en/latest/_modules/bokeh/models/tools.html#BoxZoomTool)
+
+
+(4) Hover Tool
+
+Activating the hover tool pops up a tooltip showing host's basic information when the cursor is over a point. The information of the tooltip includes host name, host address, property type, room type, accommodates, number of bedrooms, number of bathrooms and daily rent price. An example of using hover tool is as below
+
+This is a build-in tool of Bokeh package. To see documentation of this tool, please click [here](http://bokeh.pydata.org/en/latest/_modules/bokeh/models/tools.html#HoverTool)
+
+
+(5) Tap Selection Tool
+
+The tap selection tool allows users to select at a single point on the map by clicking a left mouse button, or tapping with a finger and then present host detailed information on the right side of the map.
+
+This is a build-in tool of Bokeh package. To see documentation of this tool, please click [here](http://bokeh.pydata.org/en/latest/_modules/bokeh/models/tools.html#Drag)
+
+** Filter Area: **
+
+(1) Room Type Check Box
+
+Room Type check box allows users to select hosts with specific property type to present on the map. The default selection is all three property type. If a user only wants to see hosts providing private room, he just needs to only tick private room option. An example is shown below. Map only shows hosts that provide private room, representing by red points on the map.
+
+##### Sub-component 2: View of Neighbourhood
+
+This sub-component shows an interactive map that plot each single host. In the Map Area, users can drag the map, zoom in or out using wheels on mouse, or move cursor on point to see the host's detailed information such as address, number of bedrooms, number of bathrooms etc. In the Filters Area, users can add filters to hosts, for example: 
+
+
+##### Sub-component 3: View of Correnlation between Features and Rent Price
+
+This sub-component can generate figures to present correlations between selected feature and the rent price. 
+
+Input : name of selected feature
+
+output: plot (scatter plot / box plot) of selected feature and rent price
+
+
+### Componenet 2: Pricing Prediction
 We have two components in our Machine Learning Model part, they are Price Predicting for Airbnb Costumers and Probability of Renting Predicting for Airbnb host. 
 
 For Price Predicting, we will compare the accuracy of using Ridge Regression with gradient descent, Lasso regression with coordinate descent and Elastic Net Regularization, and We will select the better one to use as our price predicting model. 
 
-#### Component Specification:
-### Modeling Selecting and Feature Selecting 
+#### Modeling Selecting and Feature Selecting 
 Name: MinCoeff_Ridge/ MinCoeff_Lasso/ MinCoeff_Ent
 
 What it does:  
@@ -45,7 +106,7 @@ Output:
 The Optimal Coefficients by Logistic Regression 
 
 
-### Price and Probability Predicting 
+#### Price and Probability Predicting 
 
 Name: PricePredicting
 
@@ -86,9 +147,7 @@ Scikit-learn is a powerful machine learning library for Python. It features vari
 
 
 
-### Componenet 2: Text Analysis of Reviews
-
-#### Component Specification:
+### Componenet 3: Text Analysis of Reviews
 
 ##### Sub-component1: Sentiment Score of Reviews
 

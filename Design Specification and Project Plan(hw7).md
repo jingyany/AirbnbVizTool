@@ -125,6 +125,12 @@ You should have a subsection here for each use case in your functional specifica
 ## Part 3: Project plan
 Provide details for what you'll accomplish in the next two weeks, and higher level descriptions for the remaining weeks in the quarter so that the end result is that you have implemented and tested a system that accomplishes your use cases.
 
+For the following week, we will select important features that are relevant to the lising pricing using machine learning model. Those features will be implemented on the user interface we build using bokeh. We will also build up our price prediction model. The predicted data will be input to our final visualization as well. The user interface need to be refined further after we have all predicted data. We will also explore more advanced feature of bokeh to make our final interactive visualization more informative and user-friendly.
+
+In the last week, we will make sure all the codes following pep8 programming style, and add documentation to all the codes. Then, all project documentation on github need to be finalized and well organized. The final project report and presentation slides should be finished too.
+
+
+
 
 ## References
 "Natural Language Toolkit." Natural Language Toolkit — NLTK 3.0 Documentation. N.p., n.d. Web. 18 May 2017.

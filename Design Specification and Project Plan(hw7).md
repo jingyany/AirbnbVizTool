@@ -83,6 +83,13 @@ OutPut:
 
 Price base on your preferences
 
+
+#### Python Packages:
+we will use scikit-learn python package for price predicting
+
+Scikit-learn is a powerful machine learning library for Python. It features various classification, regression and clustering algorithms including support vector machines, random forests, gradient boosting, k-means and DBSCAN, and is designed to interoperate with Python numerical and scientific libraries NunPy and SciPy. 
+
+
 ### Componenet 3: Natural Language Processing
 
 #### Component Specification:

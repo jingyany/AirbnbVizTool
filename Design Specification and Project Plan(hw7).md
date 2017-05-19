@@ -27,18 +27,25 @@ Disadvantage: For Elastic Net, two parameters should be tuned/selected on traini
 
 ### Componenet 2: Natural Language Processing
 
+#### Component Specification:
+
 name: SentimentOfReviews
+
 what it does: Conduct sentiment analysis on previous guests' reviews
+
 Input: review, a sentence string
+
 Output: score, a float
+
+#### Python Packages:
 
 In this component, we will use two python packages, py-corenlp and NLTK.
 
-py-corenlp: Python wrapper for Stanford CoreNLP. This simply wraps the API from the server included with CoreNLP 3.6.0
+py-corenlp: Python wrapper for Stanford CoreNLP. This simply wraps the API from the server included with CoreNLP 3.6.0. Stanford CoreNLP provides a set of natural language analysis tools. It can give the base forms of words, their parts of speech, whether they are names of companies, people, etc., normalize dates, times, and numeric quantities, mark up the structure of sentences in terms of phrases and word dependencies, indicate which noun phrases refer to the same entities, indicate sentiment, extract particular or open-class relations between entity mentions, get quotes people said, etc.
 
-NLTK (Natural Language Toolkit): NLTK is a leading platform for building Python programs to work with human language data
+NLTK (Natural Language Toolkit): NLTK is a leading platform for building Python programs to work with human language data.
 
-#### Component Specification:
+
 
 
 
@@ -59,3 +66,4 @@ Provide details for what you'll accomplish in the next two weeks, and higher lev
 
 Smilli. "Smilli/py-corenlp." GitHub. N.p., 19 May 2016. Web. 18 May 2017.
 
+"Stanford CoreNLP – Core Natural Language Software." Stanford CoreNLP. N.p., n.d. Web. 18 May 2017.

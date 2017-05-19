@@ -2,19 +2,19 @@
 This section should list the components that you expect to have in your project (not necessarily a complete list), what they do, and how their interfaces (e.g., functions with inputs and outputs). If the component is an existing package, then you should point to a documentation for the package. If the component is something that you'll build, then describe (maybe at a high level) the functions and their inputs and outputs.
 
 
-### Componenet 1: Feature Selection
+### Componenet 1: Pricing Prediction
 We have two components in our Machine Learning Model part, they are Price Predicting for Airbnb Costumers and Probability of Renting Predicting for Airbnb host. 
 
 For Price Predicting, we will compare the accuracy of using Ridge Regression with gradient descent, Lasso regression with coordinate descent and Elastic Net Regularization, and We will select the better one to use as our price predicting model. 
 
 #### Component Specification:
-### Ridge Regression 
-Name: MinCoeff_Ridge
+### Modeling Selecting and Feature Selecting 
+Name: MinCoeff_Ridge/ MinCoeff_Lasso/ MinCoeff_Ent
 
 What it does:  
 
-- Fitting the data by sklearn.linear_model.RidgeCV , and find the alpha 
-- Using the optimal alpha for sklearn.linear_model.Ridge, and find the optimal coefficients 
+- Fitting the data by sklearn.linear_model.RidgeCV/LassoCV/ElasticNetCV , and find the alpha(or l1_ratio) 
+- Using the optimal alpha(or l1_ration) for sklearn.linear_model.Ridge/Lasso/ElasticNet, and find the optimal coefficients 
 
 Input: 
 
@@ -23,44 +23,10 @@ Input:
 
 Output: 
 
-The Optimal Coefficients by Ridge regression 
+The Optimal Coefficients by Ridge/Lasso/Elastic-Net regression 
 
-### Lasso 
-Name: MinCoeff_Lasso
 
-What it does:  
-
-- Fitting the data by sklearn.linear_model.lassoCV , and find the optimal alpha 
-- Using the optimal alpha for sklearn.linear_model.lasso, and find the optimal coefficients 
-
-Input:
-
-- Y, price 
-- X, Matrix of Variables
-
-Output: 
-
-The Optimal Coefficients by Lasso 
-
-### Elastic-Net 
-
-Name: MinCoeff_Ent
-
-What it does:  
-
-- Fitting the data by sklearn.linear_model.ElasticNetCV , and find the optimal alpha and l1_ration 
-- Using the optimal alpha and l1_ration for sklearn.linear_ElasticNetCV , and find the optimal Coefficients for price predicting model 
-
-Input :
-
-- Y, price 
-- X, Matrix of Variables
-
-Output : 
-
-The Optimal Coefficients by Elastic-Net
-
-### Componenet 2: Pricing Prediction
+### Price Predicting 
 
 Name: PricePredicting
 

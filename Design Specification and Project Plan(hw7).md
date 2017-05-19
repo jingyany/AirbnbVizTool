@@ -9,67 +9,60 @@ For Price Predicting, we will compare the accuracy of using Ridge Regression wit
 
 #### Component Specification:
 ### Ridge Regression 
-Name: 
-
--MinCoeff_Ridge
+Name: MinCoeff_Ridge
 
 What it does:  
--Fitting the data by sklearn.linear_model.RidgeCV , and find the alpha 
 
--Using the optimal alpha for sklearn.linear_model.Ridge, and find the optimal coefficients 
+- Fitting the data by sklearn.linear_model.RidgeCV , and find the alpha 
+- Using the optimal alpha for sklearn.linear_model.Ridge, and find the optimal coefficients 
 
-Input:
+Input: 
 
--Y, price 
-
--X, Matrix of Variables
+- Y, price 
+- X, Matrix of Variables
 
 Output: 
 
--The Optimal Coefficients by Ridge regression 
+The Optimal Coefficients by Ridge regression 
 
 ### Lasso 
-Name: 
-
--MinCoeff_Lasso
+Name: MinCoeff_Lasso
 
 What it does:  
--Fitting the data by sklearn.linear_model.lassoCV , and find the optimal alpha 
 
--Using the optimal alpha for sklearn.linear_model.lasso, and find the optimal coefficients 
+- Fitting the data by sklearn.linear_model.lassoCV , and find the optimal alpha 
+- Using the optimal alpha for sklearn.linear_model.lasso, and find the optimal coefficients 
 
 Input:
--Y, price 
 
--X, Matrix of Variables
+- Y, price 
+- X, Matrix of Variables
 
 Output: 
 
--The Optimal Coefficients by Lasso 
+The Optimal Coefficients by Lasso 
 
 ### Elastic-Net 
-Name: 
--MinCoeff_Ent
+
+Name: MinCoeff_Ent
 
 What it does:  
--Fitting the data by sklearn.linear_model.ElasticNetCV , and find the optimal alpha and l1_ration 
 
--Using the optimal alpha and l1_ration for sklearn.linear_ElasticNetCV , and find the optimal Coefficients for price predicting model 
+- Fitting the data by sklearn.linear_model.ElasticNetCV , and find the optimal alpha and l1_ration 
+- Using the optimal alpha and l1_ration for sklearn.linear_ElasticNetCV , and find the optimal Coefficients for price predicting model 
 
 Input :
 
--Y, price 
-
--X, Matrix of Variables
+- Y, price 
+- X, Matrix of Variables
 
 Output : 
--The Optimal Coefficients by Elastic-Net
+
+The Optimal Coefficients by Elastic-Net
 
 ### Price Predicting 
 
-Name: 
-
--PricePredicting
+Name: PricePredicting
 
 What it Does: 
 
@@ -85,6 +78,7 @@ Price base on your preferences
 
 
 #### Python Packages:
+
 we will use scikit-learn python package for price predicting
 
 Scikit-learn is a powerful machine learning library for Python. It features various classification, regression and clustering algorithms including support vector machines, random forests, gradient boosting, k-means and DBSCAN, and is designed to interoperate with Python numerical and scientific libraries NunPy and SciPy. 

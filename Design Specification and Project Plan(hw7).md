@@ -13,8 +13,8 @@ Name: MinCoeff_Ridge/ MinCoeff_Lasso/ MinCoeff_Ent
 
 What it does:  
 
-- Fitting the data by sklearn.linear_model.RidgeCV/LassoCV/ElasticNetCV , and find the alpha(or l1_ratio) 
-- Using the optimal alpha(or l1_ration) for sklearn.linear_model.Ridge/Lasso/ElasticNet, and find the optimal coefficients 
+- Fitting the data by sklearn.linear_model.RidgeCV/ LassoCV/ ElasticNetCV , and find the alpha(or l1_ratio) 
+- Using the optimal alpha(or l1_ration) for sklearn.linear_model.Ridge/ Lasso/ ElasticNet, and find the optimal coefficients 
 
 Input: 
 
@@ -26,7 +26,26 @@ Output:
 The Optimal Coefficients by Ridge/Lasso/Elastic-Net regression 
 
 
-### Price Predicting 
+
+Name: MinCoeff_Univariate/ MinCoeff_Recursive/ MinCoeff_Random
+
+What it does:  
+
+- Fitting the data by Univaruate Selection/ Recyrsuve Feture Elimination/ Randomized Logistic Regression 
+- Use the selected variable to fit the logistic model
+- Get the optimal Coefficients
+ 
+Input: 
+
+- Y, avaliable, 0 is no, 1 is yes  
+- X, Matrix of Variables
+
+Output: 
+
+The Optimal Coefficients by Logistic Regression 
+
+
+### Price and Probability Predicting 
 
 Name: PricePredicting
 
@@ -43,11 +62,28 @@ OutPut:
 Price base on your preferences
 
 
+
+Name: ProbabilityPredicting
+
+What it Does: 
+
+Pridecting probability of availability  by selecting optimal coefficents from either MinCoeff_Univariate/ MinCoeff_Recursive/ MinCoeff_Random.
+
+Input: 
+
+Features by your preference( eg. number of bedrooms..)
+
+OutPut:
+
+Probability of Availability  base on your input
+
+
 #### Python Packages:
 
 we will use scikit-learn python package for price predicting
 
 Scikit-learn is a powerful machine learning library for Python. It features various classification, regression and clustering algorithms including support vector machines, random forests, gradient boosting, k-means and DBSCAN, and is designed to interoperate with Python numerical and scientific libraries NunPy and SciPy. 
+
 
 
 ### Componenet 3: Natural Language Processing
@@ -98,3 +134,5 @@ In the last week, we will make sure all the codes following pep8 programming sty
 Smilli. "Smilli/py-corenlp." GitHub. N.p., 19 May 2016. Web. 18 May 2017.
 
 "Stanford CoreNLP – Core Natural Language Software." Stanford CoreNLP. N.p., n.d. Web. 18 May 2017.
+18 May 2017.
+David Cournapeau. "Scikit learn in python" GitHub. N.p., 19 May 2016. Web. 18 May 2017.

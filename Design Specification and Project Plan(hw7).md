@@ -13,11 +13,10 @@ Name:
 
 What it does:  
 -Fitting the data by sklearn.linear_model.RidgeCV , and find the alpha 
-
 -Using the optimal alpha for sklearn.linear_model.Ridge, and find the optimal coefficients 
+
 Input :
 -Y, price 
-
 -X, Matrix of Variables
 
 Output : 
@@ -29,7 +28,6 @@ Name:
 
 What it does:  
 -Fitting the data by sklearn.linear_model.lassoCV , and find the optimal alpha 
-
 -Using the optimal alpha for sklearn.linear_model.lasso, and find the optimal coefficients 
 
 Input :
@@ -45,7 +43,6 @@ Name:
 
 What it does:  
 -Fitting the data by sklearn.linear_model.ElasticNetCV , and find the optimal alpha and l1_ration 
-
 -Using the optimal alpha and l1_ration for sklearn.linear_ElasticNetCV , and find the optimal Coefficients for price predicting model 
 
 Input :

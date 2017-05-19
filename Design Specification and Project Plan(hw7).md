@@ -10,6 +10,7 @@ For Price Predicting, we will compare the accuracy of using Ridge Regression wit
 #### Component Specification:
 ### Ridge Regression 
 Name: 
+
 -MinCoeff_Ridge
 
 What it does:  
@@ -17,16 +18,19 @@ What it does:
 
 -Using the optimal alpha for sklearn.linear_model.Ridge, and find the optimal coefficients 
 
-Input :
+Input:
+
 -Y, price 
 
 -X, Matrix of Variables
 
-Output : 
+Output: 
+
 -The Optimal Coefficients by Ridge regression 
 
 ### Lasso 
 Name: 
+
 -MinCoeff_Lasso
 
 What it does:  
@@ -34,12 +38,13 @@ What it does:
 
 -Using the optimal alpha for sklearn.linear_model.lasso, and find the optimal coefficients 
 
-Input :
+Input:
 -Y, price 
 
 -X, Matrix of Variables
 
-Output : 
+Output: 
+
 -The Optimal Coefficients by Lasso 
 
 ### Elastic-Net 
@@ -52,6 +57,7 @@ What it does:
 -Using the optimal alpha and l1_ration for sklearn.linear_ElasticNetCV , and find the optimal Coefficients for price predicting model 
 
 Input :
+
 -Y, price 
 
 -X, Matrix of Variables

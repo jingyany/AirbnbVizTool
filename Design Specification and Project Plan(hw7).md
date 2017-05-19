@@ -11,48 +11,66 @@ This sub-component shows an interactive map that plot each single host. In the M
 
 **Map Area:**
 
+GMapPlot()
+
+Generate a map presenting by HTML file.
+
+Input: 
+ - x_range
+ - y_range
+ - plot_width
+ - plot_height
+ - map_options
+ - api_key
+
+Output: a map on HTML
+
+This is a build-in function from Python package Bokeh, To see documentation of this tool, please click [here](http://bokeh.pydata.org/en/latest/docs/reference/models/map_plots.html)
+
 (1) Pan Tool
 
 Activating the pan tool allows the users to pan the map by left-dragging a mouse or dragging a finger across the map region.
 
-This is a build-in tool of Bokeh package. To see documentation of this tool, please click [here](http://bokeh.pydata.org/en/latest/_modules/bokeh/models/tools.html#Drag)
+This is a build-in function from Python package Bokeh. To see documentation of this tool, please click [here](http://bokeh.pydata.org/en/latest/_modules/bokeh/models/tools.html#Drag)
 
 (2) Reset Tool
 
 Clicking the reset tool button allows users to restore the map to the original view.
 
-This is a build-in tool of Bokeh package. To see documentation of this tool, please click [here](http://bokeh.pydata.org/en/latest/_modules/bokeh/models/tools.html#Drag)
+This is a build-in function from Python package Bokeh. To see documentation of this tool, please click [here](http://bokeh.pydata.org/en/latest/_modules/bokeh/models/tools.html#Drag)
 
 
 (3) Wheel Zoom Tool
 
 Activating the wheel zoom tool allows users to zoom the map in and out, centered on the current mouse location.
 
-This is a build-in tool of Bokeh package. To see documentation of this tool, please click [here](http://bokeh.pydata.org/en/latest/_modules/bokeh/models/tools.html#BoxZoomTool)
+This is a build-in function from Python package Bokeh. To see documentation of this tool, please click [here](http://bokeh.pydata.org/en/latest/_modules/bokeh/models/tools.html#BoxZoomTool)
 
 
 (4) Hover Tool
 
 Activating the hover tool pops up a tooltip showing host's basic information when the cursor is over a point. The information of the tooltip includes host name, host address, property type, room type, accommodates, number of bedrooms, number of bathrooms and daily rent price. An example of using hover tool is as below
 
-This is a build-in tool of Bokeh package. To see documentation of this tool, please click [here](http://bokeh.pydata.org/en/latest/_modules/bokeh/models/tools.html#HoverTool)
+This is a build-in function from Python package Bokeh. To see documentation of this tool, please click [here](http://bokeh.pydata.org/en/latest/_modules/bokeh/models/tools.html#HoverTool)
 
 
 (5) Tap Selection Tool
 
 The tap selection tool allows users to select at a single point on the map by clicking a left mouse button, or tapping with a finger and then present host detailed information on the right side of the map.
 
-This is a build-in tool of Bokeh package. To see documentation of this tool, please click [here](http://bokeh.pydata.org/en/latest/_modules/bokeh/models/tools.html#Drag)
+This is a build-in function from Python package Bokeh. To see documentation of this tool, please click [here](http://bokeh.pydata.org/en/latest/_modules/bokeh/models/tools.html#Drag)
 
 ** Filter Area: **
 
 (1) Room Type Check Box
 
-Room Type check box allows users to select hosts with specific property type to present on the map. The default selection is all three property type. If a user only wants to see hosts providing private room, he just needs to only tick private room option. An example is shown below. Map only shows hosts that provide private room, representing by red points on the map.
+Room Type check box allows users to select hosts with specific property type to present on the map. The default selection is all three property type. If a user only wants to see hosts providing private room, he just needs to only tick private room option. 
+
+This is a build-in function from Python package Bokeh. To see documentation of this tool, please click [here](http://bokeh.pydata.org/en/latest/_modules/bokeh/models/tools.html#Drag)
 
 ##### Sub-component 2: View of Neighbourhood
 
-This sub-component shows an interactive map that plot each single host. In the Map Area, users can drag the map, zoom in or out using wheels on mouse, or move cursor on point to see the host's detailed information such as address, number of bedrooms, number of bathrooms etc. In the Filters Area, users can add filters to hosts, for example: 
+This sub-component shows an interactive map that plot polygons of each neighbourhood. In the Map Area, users can drag the map, zoom in or out, or move cursor on point to see the neighbourhood name and click a neighbourhood. In the information Area on the left of Map, users can see detailed information of clicked neighbourhood including neighbourhood group and average rent price of the neighbourhood. Users also can see a ranked bar chart that shows a ranks of neighbourhood group by average rent price, when click a neighbourhood on map, bar of the according neighbourhood group on bar chars will be highlight using a different color.
 
 
 ##### Sub-component 3: View of Correnlation between Features and Rent Price
@@ -192,14 +210,14 @@ NLTK (Natural Language Toolkit): NLTK is a leading platform for building Python 
 ## Part 2: Interactions
 You should have a subsection here for each use case in your functional specification (homework 6). In each subsection, you will describe how the components interact to accomplish the use case.
 
-- Mapping all listings in Seattle area with selected features
-- Mapping all neighborhoods in Seattle area showing average listing price of each neighborhood
-- Scatter plot of predicted price according to the room type.
-- Scatter plot of predicted price according to the neighborhood.
-- Scatter plot of predicted price according to the housing amenities.
-- Scatter plot of predicted price according to the room type.
+#### User cases under component 1 (Interactive Map)
 
-#### User cases under component 2 (text analysis of reviews)
+- Mapping all listings in Seattle area with selected features
+Users can drag the map, zoom in or out using wheels on mouse, or move cursor on point to see the host's detailed information such as address, number of bedrooms, number of bathrooms etc. In the Filters Area, users can add filters to hosts, for example: choose to see hosts with room type of Private Room etc.
+- Mapping all neighborhoods in Seattle area showing average listing price of each neighborhood
+Uers can drag the map, zoom in or out, or move cursor on point to see the neighbourhood name and click a neighbourhood. In the information Area on the left of Map, users can see detailed information of clicked neighbourhood including neighbourhood group and average rent price of the neighbourhood. Users also can see a ranked bar chart that shows a ranks of neighbourhood group by average rent price, when click a neighbourhood on map, bar of the according neighbourhood group on bar chars will be highlight using a different color.
+
+#### User cases under component 3 (text analysis of reviews)
 - Scatter plot of listing price and the sentiment score.
 Use the result, sentiment score, from Sub-component1 and pricing to create a scatter plot. User can visualize the relationship between review and listing's price
 - Scatter plot of listing price and the number of reviews per listing.

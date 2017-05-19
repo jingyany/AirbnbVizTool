@@ -2,7 +2,7 @@
 This section should list the components that you expect to have in your project (not necessarily a complete list), what they do, and how their interfaces (e.g., functions with inputs and outputs). If the component is an existing package, then you should point to a documentation for the package. If the component is something that you'll build, then describe (maybe at a high level) the functions and their inputs and outputs.
 
 
-### Componenet 1: Pricing Prediction
+### Componenet 1: Feature Selection
 We have two components in our Machine Learning Model part, they are Price Predicting for Airbnb Costumers and Probability of Renting Predicting for Airbnb host. 
 
 For Price Predicting, we will compare the accuracy of using Ridge Regression with gradient descent, Lasso regression with coordinate descent and Elastic Net Regularization, and We will select the better one to use as our price predicting model. 
@@ -60,7 +60,7 @@ Output :
 
 The Optimal Coefficients by Elastic-Net
 
-### Price Predicting 
+### Componenet 2: Pricing Prediction
 
 Name: PricePredicting
 

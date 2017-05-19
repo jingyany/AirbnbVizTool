@@ -86,7 +86,7 @@ Scikit-learn is a powerful machine learning library for Python. It features vari
 
 
 
-### Componenet 3: Natural Language Processing
+### Componenet 2: Natural Language Processing
 
 #### Component Specification:
 
@@ -113,7 +113,12 @@ NLTK (Natural Language Toolkit): NLTK is a leading platform for building Python 
 ## Part 2: Interactions
 You should have a subsection here for each use case in your functional specification (homework 6). In each subsection, you will describe how the components interact to accomplish the use case.
 
-
+- Mapping all listings in Seattle area with selected features
+- Mapping all neighborhoods in Seattle area showing average listing price of each neighborhood
+- Scatter plot of predicted price according to the room type.
+- Scatter plot of predicted price according to the neighborhood.
+- Scatter plot of predicted price according to the housing amenities.
+- Scatter plot of predicted price according to the room type.
 
 
 
@@ -134,5 +139,5 @@ In the last week, we will make sure all the codes following pep8 programming sty
 Smilli. "Smilli/py-corenlp." GitHub. N.p., 19 May 2016. Web. 18 May 2017.
 
 "Stanford CoreNLP – Core Natural Language Software." Stanford CoreNLP. N.p., n.d. Web. 18 May 2017.
-18 May 2017.
+
 David Cournapeau. "Scikit learn in python" GitHub. N.p., 19 May 2016. Web. 18 May 2017.

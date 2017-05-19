@@ -25,6 +25,23 @@ Advantage: I t is hybrid of lasso and ridge regression.  It is trained with L1 a
 
 Disadvantage: For Elastic Net, two parameters should be tuned/selected on training and validation data set. For LASSO, these is only one tuning parameter. Although Elastic Net is proposed with the regression model, it can also be extending to classification problems (such as gene selection). 
 
+### Componenet 2: Natural Language Processing
+
+name: SentimentOfReviews
+what it does: Conduct sentiment analysis on previous guests' reviews
+Input: review, a sentence string
+Output: score, a float
+
+In this component, we will use two python packages, py-corenlp and NLTK.
+
+py-corenlp: Python wrapper for Stanford CoreNLP. This simply wraps the API from the server included with CoreNLP 3.6.0
+
+NLTK (Natural Language Toolkit): NLTK is a leading platform for building Python programs to work with human language data
+
+#### Component Specification:
+
+
+
 ## Part 2: Interactions
 You should have a subsection here for each use case in your functional specification (homework 6). In each subsection, you will describe how the components interact to accomplish the use case.
 
@@ -35,3 +52,10 @@ You should have a subsection here for each use case in your functional specifica
 
 ## Part 3: Project plan
 Provide details for what you'll accomplish in the next two weeks, and higher level descriptions for the remaining weeks in the quarter so that the end result is that you have implemented and tested a system that accomplishes your use cases.
+
+
+## References
+"Natural Language Toolkit." Natural Language Toolkit — NLTK 3.0 Documentation. N.p., n.d. Web. 18 May 2017.
+
+Smilli. "Smilli/py-corenlp." GitHub. N.p., 19 May 2016. Web. 18 May 2017.
+

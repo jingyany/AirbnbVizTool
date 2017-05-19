@@ -7,42 +7,48 @@ We have two components in our Machine Learning Model part, they are Price Predic
 
 For Price Predicting, we will compare the accuracy of using Ridge Regression with gradient descent, Lasso regression with coordinate descent and Elastic Net Regularization, and We will select the better one to use as our price predicting model. 
 
-## Ridge Regression 
+#### Component Specification:
+### Ridge Regression 
 Name: 
 -MinCoeff_Ridge
 
 What it does:  
 -Fitting the data by sklearn.linear_model.RidgeCV , and find the alpha 
+
 -Using the optimal alpha for sklearn.linear_model.Ridge, and find the optimal coefficients 
 
 Input :
 -Y, price 
+
 -X, Matrix of Variables
 
 Output : 
 -The Optimal Coefficients by Ridge regression 
 
-## Lasso 
+### Lasso 
 Name: 
 -MinCoeff_Lasso
 
 What it does:  
 -Fitting the data by sklearn.linear_model.lassoCV , and find the optimal alpha 
+
 -Using the optimal alpha for sklearn.linear_model.lasso, and find the optimal coefficients 
 
 Input :
 -Y, price 
+
 -X, Matrix of Variables
 
 Output : 
 -The Optimal Coefficients by Lasso 
 
-## Elastic-Net 
+### Elastic-Net 
 Name: 
--MinCoeff_ENR
+-MinCoeff_Ent
 
 What it does:  
 -Fitting the data by sklearn.linear_model.ElasticNetCV , and find the optimal alpha and l1_ration 
+
 -Using the optimal alpha and l1_ration for sklearn.linear_ElasticNetCV , and find the optimal Coefficients for price predicting model 
 
 Input :
@@ -53,7 +59,23 @@ Input :
 Output : 
 -The Optimal Coefficients by Elastic-Net
 
+### Price Predicting 
 
+Name: 
+
+-PricePredicting
+
+What it Does: 
+
+Pridecting price by selecting optimal coefficents from either MinCoeff_Ridgem MinCoeff_Lasso, or MinCoeff_Ent. 
+
+Input: 
+
+Features by your preference( eg. number of bedrooms..)
+
+OutPut:
+
+Price base on your preferences
 
 ### Componenet 3: Natural Language Processing
 

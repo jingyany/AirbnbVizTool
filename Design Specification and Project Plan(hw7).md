@@ -7,25 +7,53 @@ We have two components in our Machine Learning Model part, they are Price Predic
 
 For Price Predicting, we will compare the accuracy of using Ridge Regression with gradient descent, Lasso regression with coordinate descent and Elastic Net Regularization, and We will select the better one to use as our price predicting model. 
 
-#### Ridge Regression: 
+## Ridge Regression 
+Name: 
+-MinCoeff_Ridge
 
-Advantage:  was the most popular technique for improving prediction accuracy. Ridge regression improves prediction error by shrinking large regression coefficients in order to reduce overfitting. Ridge Regression are good at prediction accuracy. 
+What it does:  
+-Fitting the data by sklearn.linear_model.RidgeCV , and find the alpha 
+-Using the optimal alpha for sklearn.linear_model.Ridge, and find the optimal coefficients 
+Input :
+-Y, price 
+-X, Matrix of Variables
 
-Disadvantage: Ridge cannot zero coefficients. Thus, it does not perform covariate selection and therefore does not help to make the model more interpretable.
+Output : 
+-The Optimal Coefficients by Ridge regression 
 
-#### Lasso Regression: 
+## Lasso 
+Name: 
+-MinCoeff_Lasso
 
-Advantage: Lasso is able to achieve both prediction accuracy and covariate selection by forcing the sum of the absolute value of the regression coefficients to be less than a fixed value, which forces certain coefficients to be set to zero, effectively choosing a simpler model that does not include those coefficients which makes mode more interpretable. 
+What it does:  
+-Fitting the data by sklearn.linear_model.lassoCV , and find the optimal alpha 
+-Using the optimal alpha for sklearn.linear_model.lasso, and find the optimal coefficients 
 
-Disadvantage:  It may ignore some covariates which are highly correlated. Lasso can not do group selection. If there is a group of variables among which the pairwise correlations are very high, then the LASSO tends to arbitrarily select only one variable from the group. 
+Input :
+-Y, price 
+-X, Matrix of Variables
 
-#### Elastic-Net Regularization:
+Output : 
+-The Optimal Coefficients by Lasso 
 
-Advantage: I t is hybrid of lasso and ridge regression.  It is trained with L1 and L2 prior regularize. The advantage of trading off between Lasso and Ridge is, it allows Elastic-Net to inherit some of Ridge’s stability under rotation. It solve the drawback of Lasso and Ridge, while including each as special cases. 
+## Elastic-Net 
+Name: 
+-MinCoeff_ENR
 
-Disadvantage: For Elastic Net, two parameters should be tuned/selected on training and validation data set. For LASSO, these is only one tuning parameter. Although Elastic Net is proposed with the regression model, it can also be extending to classification problems (such as gene selection). 
+What it does:  
+-Fitting the data by sklearn.linear_model.ElasticNetCV , and find the optimal alpha and l1_ration 
+-Using the optimal alpha and l1_ration for sklearn.linear_ElasticNetCV , and find the optimal Coefficients for price predicting model 
 
-### Componenet 2: Natural Language Processing
+Input :
+-Y, price 
+-X, Matrix of Variables
+
+Output : 
+-The Optimal Coefficients by Elastic-Net
+
+
+
+### Componenet 3: Natural Language Processing
 
 #### Component Specification:
 

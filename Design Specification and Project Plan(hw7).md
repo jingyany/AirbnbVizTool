@@ -217,17 +217,28 @@ Users can drag the map, zoom in or out using wheels on mouse, or move cursor on 
 - Mapping all neighborhoods in Seattle area showing average listing price of each neighborhood
 Uers can drag the map, zoom in or out, or move cursor on point to see the neighbourhood name and click a neighbourhood. In the information Area on the left of Map, users can see detailed information of clicked neighbourhood including neighbourhood group and average rent price of the neighbourhood. Users also can see a ranked bar chart that shows a ranks of neighbourhood group by average rent price, when click a neighbourhood on map, bar of the according neighbourhood group on bar chars will be highlight using a different color.
 
+#### User cases under component 2(features selecting and Modeling selecting) 
+
+- Output features/coeifficient index by different features selecting methods
+Output of Selected features/coefficients. User Can see which features are most correlated for fitting them in the model. 
+
+- Generating optimal selected coefficients by different Machine Learning Model 
+Users can see which Coefficient influence the model most, and choose the appropriate model for price/probability predicting. 
+
+- Price/Probability Predicting 
+Users can do price/probability predicting by inputing variables they interested.
+
 #### User cases under component 3 (text analysis of reviews)
 - Scatter plot of listing price and the sentiment score.
 Use the result, sentiment score, from Sub-component1 and pricing to create a scatter plot. User can visualize the relationship between review and listing's price
 - Scatter plot of listing price and the number of reviews per listing.
 Use the result, number of reviews per listing, from Sub-component2 and pricing to create a scatter plot. User can visualize the relationship between number of reviews per listing and listing's price
 - Scatter plot of sentiment score and the length of the reviews.
-Use the result, length of review, from Sub-component3 and pricing to create a scatter plot. User can visualize the relationship betweenlength of review and listing's price
+Use the result, length of review, from Sub-component3 and pricing to create a scatter plot. User can visualize the relationship between length  of review and listing's price
 - Scatter plot of sentiment score and the length of the reviews.
 Create a scatter plot based on the results from sub-component1 and sun-component3
 - histogram of listing price and the length of the reviews.
-Create a histigram based on the result from sub-component3
+Create a histogram  based on the result from sub-component3
 
 ## Part 3: Project plan
 Provide details for what you'll accomplish in the next two weeks, and higher level descriptions for the remaining weeks in the quarter so that the end result is that you have implemented and tested a system that accomplishes your use cases.

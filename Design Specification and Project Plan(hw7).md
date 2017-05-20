@@ -219,13 +219,13 @@ Uers can drag the map, zoom in or out, or move cursor on point to see the neighb
 
 #### User cases under component 2(features selecting and Modeling selecting) 
 
-- Output features/coeifficient index by different features selecting methods
+- Output features/coeifficient index by different features selecting methods.
 Output of Selected features/coefficients. User Can see which features are most correlated for fitting them in the model. 
 
-- Generating optimal selected coefficients by different Machine Learning Model 
+- Generating optimal selected coefficients by different Machine Learning Model. 
 Users can see which Coefficient influence the model most, and choose the appropriate model for price/probability predicting. 
 
-- Price/Probability Predicting 
+- Price/Probability Predicting. 
 Users can do price/probability predicting by inputing variables they interested.
 
 #### User cases under component 3 (text analysis of reviews)

@@ -44,10 +44,11 @@ def generate_ranked_data():
     ranked_rating_index = ranked_rating_list.index.tolist()
     ranked_rating_value = ranked_rating_list.tolist()
 
-    df_rating = pd.DataFrame({'ranked_price_index': ranked_rating_index, 'ranked_price': ranked_rating_value})
+    df_rating = pd.DataFrame({'ranked_rating_index': ranked_rating_index, 'ranked_rating': ranked_rating_value})
     df_rating = df_rating.to_json(orient='records')
 
     rating_filepath = "../../js/ranked_rating_data_by_group.js"
     rating_file = open(rating_filepath, "w")
     rating_file.write("var ranked_rating_data_by_group = " + df_rating);
     rating_file.close()
+

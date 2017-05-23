@@ -1,3 +1,6 @@
+import pandas as pd
+import json
+
 def generate_neighbourhoods():
     data1 = pd.read_csv("../../data/listings.csv")
     data2 = pd.read_csv("../../data/listings2.csv")
@@ -6,10 +9,10 @@ def generate_neighbourhoods():
     rating = data2['review_scores_rating'].tolist()
 
     # neighourhood name list
-    name_list = [data1['neighbourhood'][0]]
+    name_list = []
     n = len(neighbourhood)
-    for i in range(1, n):
-        if neighbourhood[i] != neighbourhood[i - 1]:
+    for i in range(0, n):
+        if neighbourhood[i] not in name_list:
             name_list.append(neighbourhood[i])
 
     # avg price, avg rating by neighbourhood
@@ -26,19 +29,59 @@ def generate_neighbourhoods():
         avg_price.append(price_target)
         avg_rating.append(rating_target)
 
+    # generate ranked rating by neighbourhood
+    ranked_rating_list = rating_list.sort_values(ascending = False)
+    ranked_rating_index = ranked_rating_list.index.tolist()
+    ranked_rating_value = ranked_rating_list.tolist()
+
+    file = open("../../js/ranked_rating.js", "w")
+    file.write( "var ranked_rating_index = " + str(ranked_rating_index) + "\n"
+            + "var ranked_rating_value = " + str(ranked_rating_value));
+    file.close()
+
+    # generate ranked price by neighbourhood
+    ranked_price_list = price_list.sort_values(ascending = False)
+    ranked_price_index = ranked_price_list.index.tolist()
+    ranked_price_value = ranked_price_list.tolist()
+
+    file = open("../../js/ranked_price.js", "w")
+    file.write( "var ranked_price_index = " + str(ranked_price_index) + "\n"
+            + "var ranked_price_value = " + str(ranked_price_value));
+    file.close()
+
     with open('../../data/neighbourhoods.geojson') as f:
         data = json.load(f)
-    for i in range(0, 91):
-        a_dict = {'price': avg_price[i], 'rating': avg_rating[i]}
-        data["features"][i]["properties"].update(a_dict)
+    n = len(data["features"])
+    for i in range(0,n):
+        name = data["features"][i]["properties"]["neighbourhood"]
+        if name in ranked_price_index:
+            idx = ranked_price_index.index(name)
+            a_dict = {'price':ranked_price_value[idx]}
+            data["features"][i]["properties"].update(a_dict)
+        else:
+            a_dict = {'price': 'No data'}
+            data["features"][i]["properties"].update(a_dict)
+        if name in ranked_rating_index:
+            idx = ranked_rating_index.index(name)
+            a_dict = {'rating':ranked_rating_value[idx]}
+            data["features"][i]["properties"].update(a_dict)
+        else:
+            a_dict = {'rating': 'No data'}
+            data["features"][i]["properties"].update(a_dict)
 
     with open('../../js/neighbourhoods.json', 'w') as f:
         json.dump(data, f)
-
     file = open('../../js/neighbourhoods.json')
     data = json.load(file)
 
     with open('../../js/neighbourhoods.js', 'w') as f:
-        f.write("var neighbourhoods = " + str(data));
+        f.write( "var neighbourhoods = " + str(data));
         f.close()
 
+
+
+def main():
+    generate_neighbourhoods()
+
+if __name__ == '__main__':
+    main()

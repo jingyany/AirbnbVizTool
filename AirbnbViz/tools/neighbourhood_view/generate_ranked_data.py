@@ -26,7 +26,7 @@ def generate_ranked_data():
         avg_price.append(price_target)
         avg_rating.append(rating_target)
 
-    # generate ranked price js file
+    # generate ranked price by group js file
     ranked_price_list = price_list.sort_values(ascending=False)
     ranked_price_index = ranked_price_list.index.tolist()
     ranked_price_value = ranked_price_list.tolist()
@@ -39,7 +39,7 @@ def generate_ranked_data():
     price_file.write("var ranked_price_data_by_group = " + df_price);
     price_file.close()
 
-    # generate ranked rating js file
+    # generate ranked rating by group js file
     ranked_rating_list = rating_list.sort_values(ascending=False)
     ranked_rating_index = ranked_rating_list.index.tolist()
     ranked_rating_value = ranked_rating_list.tolist()
@@ -51,4 +51,6 @@ def generate_ranked_data():
     rating_file = open(rating_filepath, "w")
     rating_file.write("var ranked_rating_data_by_group = " + df_rating);
     rating_file.close()
+
+    
 

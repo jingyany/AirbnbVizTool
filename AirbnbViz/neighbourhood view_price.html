@@ -92,116 +92,116 @@
                 map.addSource("neighbourhoods", {
                     type : "geojson",
                     data : neighbourhoods
-        });
+                });
 
-        /*  neighbourhood layer color by price*/
-        map.addLayer({
-                'id': 'neighbour_fills',
-                'type': 'fill',
-                'source': "neighbourhoods",
-                "layout": {},
-                'paint': {
-                    'fill-color': {
-                        "property": "price",
-                        "stops": [
-                            [0, '#F2F12D'],
-                            [60, '#EED322'],
-                            [80, '#E6B71E'],
-                            [100, '#DA9C20'],
-                            [120, '#CA8323'],
-                            [140, '#B86B25'],
-                            [160, '#A25626'],
-                            [180, '#8B4225'],
-                            [200, '#723122'],
-                            [240, '#512918']
-                        ]
+            /*  neighbourhood layer color by price*/
+            map.addLayer({
+                    'id': 'neighbour_fills',
+                    'type': 'fill',
+                    'source': "neighbourhoods",
+                    "layout": {},
+                    'paint': {
+                        'fill-color': {
+                            "property": "price",
+                            "stops": [
+                                [0, '#F2F12D'],
+                                [60, '#EED322'],
+                                [80, '#E6B71E'],
+                                [100, '#DA9C20'],
+                                [120, '#CA8323'],
+                                [140, '#B86B25'],
+                                [160, '#A25626'],
+                                [180, '#8B4225'],
+                                [200, '#723122'],
+                                [240, '#512918']
+                            ]
+                        },
+                        "fill-outline-color": "white",
+                        'fill-opacity': 0.75
+                    }
+            });
+
+            /*  neighbourhood hover layer */
+            map.addLayer({
+                    "id": "neighbour_fills_hover",
+                    "type": "fill",
+                    "source": "neighbourhoods",
+                    "layout": {},
+                    "paint": {
+                        "fill-color": "#A40000",
+                        "fill-opacity": 1
                     },
-                    "fill-outline-color": "white",
-                    'fill-opacity': 0.75
-                }
-        });
+                    "filter": ["==", "neighbourhood", ""]
+            });
 
-        /*  neighbourhood hover layer */
-        map.addLayer({
-                "id": "neighbour_fills_hover",
-                "type": "fill",
-                "source": "neighbourhoods",
-                "layout": {},
-                "paint": {
-                    "fill-color": "#A40000",
-                    "fill-opacity": 1
-                },
-                "filter": ["==", "neighbourhood", ""]
-        });
-
-        /*  neighbourhood group hover layer */
-        map.addLayer({
-                "id": "group_fills_hover",
-                "type": "fill",
-                "source": "neighbourhoods",
-                "layout": {},
-                "paint": {
-                    "fill-color": "red",
-                    "fill-opacity": 0.3
-                },
-                "filter": ["==", "neighbourhood_group", ""]
-        });
+            /*  neighbourhood group hover layer */
+            map.addLayer({
+                    "id": "group_fills_hover",
+                    "type": "fill",
+                    "source": "neighbourhoods",
+                    "layout": {},
+                    "paint": {
+                        "fill-color": "red",
+                        "fill-opacity": 0.3
+                    },
+                    "filter": ["==", "neighbourhood_group", ""]
+            });
 
 
-        var popup = new mapboxgl.Popup({
-            closeButton: false,
-            closeOnClick: false
-        });
+            var popup = new mapboxgl.Popup({
+                closeButton: false,
+                closeOnClick: false
+            });
 
-        map.on('mouseenter', 'neighbour_fills', function(e) {
-        // Change the cursor style as a UI indicator.
-                map.getCanvas().style.cursor = 'pointer';
-                map.setLayoutProperty("neighbour_fills_hover", 'visibility', 'visible')
-                map.setLayoutProperty("group_fills_hover", 'visibility', 'visible')
+            map.on('mouseenter', 'neighbour_fills', function(e) {
+            // Change the cursor style as a UI indicator.
+                    map.getCanvas().style.cursor = 'pointer';
+                    map.setLayoutProperty("neighbour_fills_hover", 'visibility', 'visible')
+                    map.setLayoutProperty("group_fills_hover", 'visibility', 'visible')
 
-        });
+            });
 
-        map.on("mousemove", "neighbour_fills", function(e) {
-                map.setFilter("neighbour_fills_hover", 
-                    ["==", "neighbourhood", e.features[0].properties.neighbourhood]);
-                map.setFilter("group_fills_hover", 
-                    ["==", "neighbourhood_group", e.features[0].properties.neighbourhood_group]);
-                popup.setLngLat(e.lngLat)
-                    .setHTML(e.features[0].properties.neighbourhood)
-                    .addTo(map);
+            map.on("mousemove", "neighbour_fills", function(e) {
+                    map.setFilter("neighbour_fills_hover", 
+                        ["==", "neighbourhood", e.features[0].properties.neighbourhood]);
+                    map.setFilter("group_fills_hover", 
+                        ["==", "neighbourhood_group", e.features[0].properties.neighbourhood_group]);
+                    popup.setLngLat(e.lngLat)
+                        .setHTML(e.features[0].properties.neighbourhood)
+                        .addTo(map);
+            
+            });
+
+            map.on('click', 'neighbour_fills', function (e) {
+
+                    
+                    document.getElementById('information_name').innerHTML = "Neighbourhood Name:" 
+                                                        + "<strong>" + e.features[0].properties.neighbourhood + "</strong>";
+                    document.getElementById('information_group').innerHTML = "Neighbourhood Group:" 
+                                                    + "<strong>" + e.features[0].properties.neighbourhood_group + "</strong>";
+                    document.getElementById('information_price').innerHTML = "Average Rent Price:" 
+                                                            + "<strong>" + Math.round(e.features[0].properties.price,0) + "</strong>";
+
+                    var target = document.getElementById(e.features[0].properties.neighbourhood_group);
+                    target.style["background-color"] = "orange";
+
+                    map.on('mouseleave', 'group_fills_hover', function() {
+                        target.style["background-color"] = "";
         
-        });
+                    });  
+            
 
-        map.on('click', 'neighbour_fills', function (e) {
-
-                
-                document.getElementById('information_name').innerHTML = "Neighbourhood Name:" 
-                                                    + "<strong>" + e.features[0].properties.neighbourhood + "</strong>";
-                document.getElementById('information_group').innerHTML = "Neighbourhood Group:" 
-                                                + "<strong>" + e.features[0].properties.neighbourhood_group + "</strong>";
-                document.getElementById('information_price').innerHTML = "Average Rent Price:" 
-                                                        + "<strong>" + Math.round(e.features[0].properties.price,0) + "</strong>";
-
-                var target = document.getElementById(e.features[0].properties.neighbourhood_group);
-                target.style["background-color"] = "orange";
-
-                map.on('mouseleave', 'group_fills_hover', function() {
-                    target.style["background-color"] = "";
-    
-                });  
-        
-
-        });
+            });
 
 
-        map.on('mouseleave', 'neighbour_fills', function() {
-                map.getCanvas().style.cursor = '';
-                popup.remove();
-                map.setLayoutProperty("neighbour_fills_hover", 'visibility', 'none')
-                map.setLayoutProperty("group_fills_hover", 'visibility', 'none')
-        });
+            map.on('mouseleave', 'neighbour_fills', function() {
+                    map.getCanvas().style.cursor = '';
+                    popup.remove();
+                    map.setLayoutProperty("neighbour_fills_hover", 'visibility', 'none')
+                    map.setLayoutProperty("group_fills_hover", 'visibility', 'none')
+            });
 
-        map.addControl(new mapboxgl.NavigationControl());
+            map.addControl(new mapboxgl.NavigationControl());
 
         });
 
@@ -220,6 +220,7 @@
         <div><span style='background-color: #E6B71E'></span>80</div>
         <div><span style='background-color: #EED322'></span>60</div>
         <div><span style='background-color: #F2F12D'></span>60 below</div>
+        <div><span style='background-color: black'></span>No data</div>
     </div>
 
     <!--neighbourhood information box-->
@@ -246,6 +247,8 @@
         var bar_data = ranked_price_data_by_group;
         var rank = 0;
 
+        
+
         bar_data.forEach(function(row){
                 // generate bar
                 var div1 = document.createElement('div');
@@ -264,6 +267,8 @@
 
         });
 
+
+        
     </script>
 
     <!--ranking list-->

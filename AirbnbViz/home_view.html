@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.js'></script>
+    <script src="js/listings.js"></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:20; padding:10; }
+        #map { position:absolute; top:50px; bottom:10px; width:50%; }
+        #sidebar {position:absolute; top:50px; left:700px; }
+        #information {position:absolute; top:150px; left:700px; width:500px;}
+        #slider_bar {position:absolute; top:110px; left:700px; width:500px}
+    
+    </style>
+</head>
+
+<body>
+
+    <h2 style="top:-20px;"> 
+        Seattle Airbnb Visualization by Each Home
+    </h2>
+
+    <!--map-->
+
+    <div id='map'></div>
+
+    <div id = "sidebar">
+        <button id = "entire" onclick = "myclick()" style = "width:150px;height:40px;font: 14px sans-serif;background-color: #fbb03b">Entire home/apt</button>
+        <button id = "private" onclick = "myclick()" style = "width:150px;height:40px;font: 14px sans-serif;background-color: #3bb2d0">Private room</button>
+        <button id = "shared" onclick = "myclick()" style = "width:150px;height:40px;font: 14px sans-serif;background-color: #e55e5e">Shared room</button>
+    </div>
+
+    <script>
+        function myclick(){
+            document.getElementById('home_name').innerHTML = "hahahahaha"
+        };
+    </script>
+
+    <div id = "slider_bar"></div>
+    <script type="text/javascript">
+        var slider = document.createElement("INPUT");
+        slider.id = "slider";
+        slider.setAttribute("type", "range");
+        slider.style.width = "400px";
+        document.getElementById("slider_bar").appendChild(slider)
+    </script>
+
+    <div id = "information">
+        <fieldset>
+            <legend><strong>Detailed Information of Home</strong></legend>
+            <div id = "home_name"></div>
+            <div id = "home_address"></div>
+            <div id = "home_neighbourhood"></div>
+            <div id = "home_roomtype"></div>
+            <div id = "home_price"></div>
+            <div id = "home_pic"></div>
+        </fieldset>
+    </div>
+ 
+
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1Ijoid2FuZ2JlaXFpMTk5MTU5IiwiYSI6ImNqMm1kcTNjczAwdWUyd253Z3IxcW5xMHYifQ.iws1nZ75QX-5DETQPedmnQ';
+        var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/dark-v9',
+                center: [-122.325769,47.620057],
+                zoom: 10.1
+        });
+
+        var mapId = "wangbeiqi199159.cj2qzjlcd001p2wmxq7lm6ocm-0cldu"
+
+        map.on('load', function () {
+
+
+                map.addLayer({
+                    'id': 'homes_fills',
+                    'type': 'circle',
+                    'source': {
+                        type: "geojson",
+                        data: listings
+                    },
+                    'paint': {
+                        'circle-radius': {
+                            'base': 1.75,
+                            'stops': [[12, 2.3], [20, 200]]
+                        },
+                        // color circles by ethnicity, using data-driven styles
+                        'circle-color': {
+                            property: 'room_type',
+                            type: 'categorical',
+                            stops: [
+                                ['Entire home/apt', '#fbb03b'],
+                                ['Private room', '#3bb2d0'],
+                                ['Shared room', '#e55e5e']]
+                        },
+                        "circle-opacity": 0.85,
+                    }
+                });
+
+
+                var popup = new mapboxgl.Popup({
+                    closeButton: false,
+                    closeOnClick: false
+                });
+
+                map.on("mousemove", "homes_fills", function(e) {
+                    popup.setLngLat(e.lngLat)
+                        .setHTML("Price:" + e.features[0].properties.price)
+                        .addTo(map);
+                });
+
+                map.on('click', 'homes_fills', function (e) {
+                    popup.setLngLat(e.lngLat)
+                        .setHTML(e.features[0].properties.name)
+                        .addTo(map);
+
+                    document.getElementById('home_name').innerHTML = "<strong>home Name: </strong>" + e.features[0].properties.name;
+                    document.getElementById('home_address').innerHTML = "<strong>home Address: </strong>" + e.features[0].properties.street;
+                    document.getElementById('home_neighbourhood').innerHTML = "<strong>Neighbourhood: </strong>" + e.features[0].properties.neighbourhood;
+                    document.getElementById('home_roomtype').innerHTML = "<strong>Room Type: </strong>" + e.features[0].properties.room_type;
+                    document.getElementById('home_price').innerHTML = "<strong>Daily Price: </strong>" + e.features[0].properties.price;
+                    document.getElementById('home_pic').innerHTML = "<img src=" + e.features[0].properties.picture_url + " style='width:304px;height:228px;'>";
+
+                });
+
+                map.on('mouseenter', 'homes_fills', function(e) {
+                // Change the cursor style as a UI indicator.
+                    map.getCanvas().style.cursor = 'pointer';
+
+                });
+
+                map.on('mouseleave', 'homes_fills', function() {
+                    map.getCanvas().style.cursor = '';
+                });
+
+                map.addControl(new mapboxgl.NavigationControl());
+        });
+
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

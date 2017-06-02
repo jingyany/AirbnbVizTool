@@ -3,16 +3,11 @@
 
 ![alt text](https://github.com/wangbeiqi199159/analyze-of-seattle-airbnb-hosts/blob/master/Logo.png)
 
-'''
-- Crack Jet City/
-  |        License
-  |        README.mdCrack Jet City (master)
-  |        setup.py
-  |-------- docs
-  |        |       funtional_specification.md
-  |        |       design_specification.md
-  |        |       final_project_presentation.pptx
-  |        |       logo.png
-'''
+
+## Team Members
+
+## Software dependencies and license information
+
+## Directory Structure
 
 

@@ -4,10 +4,9 @@
 ![alt text](https://github.com/wangbeiqi199159/analyze-of-seattle-airbnb-hosts/blob/master/Logo.png)
 
 '''
-Crack Jet City
+Crack Jet City/
 |        License
 |        README.mdCrack Jet City (master)
-
 |        setup.py
 |-------- docs
 |        |       funtional_specification.md

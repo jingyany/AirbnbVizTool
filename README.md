@@ -1,4 +1,4 @@
-![alt text](https://github.com/wangbeiqi199159/analyze-of-seattle-airbnb-hosts/blob/master/Docs/Logo.png)
+![alt text](https://github.com/wangbeiqi199159/AirbnbViz/blob/master/Docs/Project_logo.png)
 
 # Crack Jet City
 

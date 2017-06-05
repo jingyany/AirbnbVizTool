@@ -19,6 +19,16 @@ The Crack Jet City team aims to provide more information and insights to guests 
 ## Software dependencies and license information
 #### Programming language: 
 
+- Python version 3.0 and above 
+- JavaScript
+- HTML
+
+#### Python packages needed:
+
+- pandas
+- NumPy
+- sklearn
+
 #### How to install the packages:
 
 #### License Information:
@@ -26,6 +36,68 @@ The MIT License is a permissive free software license originating at the Massach
 
 
 ## Directory Structure
+
+The package is organized as follows:
+```
+analyze-of-seattle-airbnb-hosts (master)
+|     .gitignore
+|     License
+|     README.md
+|     setup.py
+|----- Docs
+|     |      Design Specification.md
+|     |      Functional Specification.md
+|     |      Logo.png
+|----- AirbnbViz
+|     |   __init__.py
+|     |  
+|     |----- data
+|     |      |   listings.csv
+|     |      |   listings2.csv
+|     |      |   listings_combined.csv
+|     |      |   neighbourhoods.geojson
+|     |----- examples 
+|     |      |  
+|     |      |  
+|     |      |  
+|     |      |  
+|     |      |  
+|     |      |  
+|     |----- code
+|     |      |----- home_view
+|     |      |        |   generate_listings.py
+|     |      |        | 
+|     |      |----- neighbourhood_view        
+|     |      |        |   generate_ranked_data.py
+|     |      |        |   generate_neighbourhoods.py
+|     |      |        | 
+|     |      |----- predict_model
+|     |      |        |   data process.ipynb
+|     |      |        |   price.py
+|     |      |        |   probability.py
+|     |      |        
+|     |----- test
+|     |      |
+|     |      |
+|     |      |
+|     |----- home page
+|     |      |  index.html
+|     |      |
+|     |----- html
+|     |      |  home_view.html
+|     |      |  price.html
+|     |      |  rating.html
+|     |      |  prediction.html
+|     |      |
+|     |      |----- js  
+|     |      |        |   ranked_price_data_by_group.js  
+|     |      |        |   ranked_rating_data_by_group.js
+|     |      |        |   listings.js
+|     |      |        |   neighbourhoods.js
+|     |      |        |   neighbourhoods.json
+|     |      |        |   predict_source.js
+|     |      |        |   ranked_price.js
+|     |      |        |   ranked_rating.js
 
 
 

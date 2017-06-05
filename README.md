@@ -44,6 +44,8 @@ analyze-of-seattle-airbnb-hosts (master)
 |     License
 |     README.md
 |     setup.py
+|     start.py
+|
 |----- Docs
 |     |      Design Specification.md
 |     |      Functional Specification.md
@@ -56,38 +58,35 @@ analyze-of-seattle-airbnb-hosts (master)
 |     |      |   listings2.csv
 |     |      |   listings_combined.csv
 |     |      |   neighbourhoods.geojson
+|     |      | 
 |     |----- examples 
 |     |      |    Price VS. Comments and Reviews.ipynb
 |     |      |    Rating VS Comment's length.ipynb
 |     |      |    create avg.js.ipynb
 |     |      |    generate ranked price by neighbour group.ipynb
 |     |      |    neighborhood data.ipynb
-|     |      |  
+|     |      |    price predict model.ipynb
+|     |      | 
 |     |----- code
-|     |      |----- home_view
-|     |      |        |   generate_listings.py
-|     |      |        | 
-|     |      |----- neighbourhood_view        
-|     |      |        |   generate_ranked_data.py
-|     |      |        |   generate_neighbourhoods.py
-|     |      |        | 
-|     |      |----- predict_model
-|     |      |        |   data process.ipynb
-|     |      |        |   price.py
-|     |      |        |   probability.py
-|     |      |        
-|     |----- test
-|     |      |
-|     |      |
+|     |      |    generate_listings.py
+|     |      |    generate_neighbourhoods.py   
+|     |      |    generate_ranked_data.py   
+|     |      |    price.py    
+|     |      |    probability.py   
+|     |      |            
+|     |----- tests
+|     |      |    test_generate_listings.py
+|     |      |    test_generate_neighbourhoods.py
+|     |      |    test_generate_ranked_data.py
 |     |      |
 |     |----- home page
-|     |      |  index.html
+|     |      |    index.html
 |     |      |
 |     |----- html
-|     |      |  home_view.html
-|     |      |  price.html
-|     |      |  rating.html
-|     |      |  prediction.html
+|     |      |    home_view.html
+|     |      |    price.html
+|     |      |    rating.html
+|     |      |    prediction.html
 |     |      |
 |     |      |----- js  
 |     |      |        |   ranked_price_data_by_group.js  

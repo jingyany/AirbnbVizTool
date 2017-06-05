@@ -6,7 +6,7 @@
 
 Airbnb is a web-based marketplace for people to list, discover, and book unique accommodations around the world. Airbnb users include hosts and travelers: hosts list and rent out their unused spaces, and travelers search for and book accommodations in more than 34,000 cities and 190 countries.
 
-The Crack Jet City team aims to provide more information and insights to guests of Airbnb in Seattle to help them have a deeper understanding of what factors influence the listing price most, which neighborhood has higher/lower listing price and which neighborhood has higher and lower guests' rating via our different interactive visualizations. On the other hand, As hosts of Airbnb, they will have more idaes that how other hosts priced around them relative to dimensions such as amenities and location and what is the average listing prices of different neighborhoods in Seattle.
+The AirbnbViz team aims to provide more information and insights to guests of Airbnb in Seattle to help them have a deeper understanding of what factors influence the listing price most, which neighborhood has higher/lower listing price and which neighborhood has higher and lower guests' rating via our different interactive visualizations. On the other hand, As hosts of Airbnb, they will have more idaes that how other hosts priced around them relative to dimensions such as amenities and location and what is the average listing prices of different neighborhoods in Seattle.
 
 
 ## Team Members

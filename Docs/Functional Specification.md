@@ -27,12 +27,12 @@
     - How other people priced around me, relative to dimensions such as amenities and location?
     - Are there certain neighborhoods that are substantially more expensive than others?
 
-## Use Cases - how users interact with the system to get the information they want
+## Use Cases 
 
 - Use Case 1: Detailed listing information on map view
 
-- Use Case 2: Visualize price data by neighborhood on map
+- Use Case 2: Mapping price data by neighborhood on Seattle area
 
-- Use Case 3: Visualize previous guests' rating by neighborhood on map
+- Use Case 3: Mapping average guests' rating by neighborhood on Seattle
 
-- Use Case 4: Get predicted price by expeted room type, location and amenities
+- Use Case 4: Get predicted price by entering housing features

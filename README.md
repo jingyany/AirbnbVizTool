@@ -57,11 +57,11 @@ analyze-of-seattle-airbnb-hosts (master)
 |     |      |   listings_combined.csv
 |     |      |   neighbourhoods.geojson
 |     |----- examples 
-|     |      |  
-|     |      |  
-|     |      |  
-|     |      |  
-|     |      |  
+|     |      |    Price VS. Comments and Reviews.ipynb
+|     |      |    Rating VS Comment's length.ipynb
+|     |      |    create avg.js.ipynb
+|     |      |    generate ranked price by neighbour group.ipynb
+|     |      |    neighborhood data.ipynb
 |     |      |  
 |     |----- code
 |     |      |----- home_view

@@ -5,19 +5,19 @@
 - Map view that allows users to visualize room type and location
 - User interface that allows users to select each listing and see its detailed listing information
 
-### Use Case 2: Mapping price data by neighborhood on Seattle area
-#### Components
-- Database with average rent price by neighborhood
-- Display the ranking of average rent price by neighborhood groups and top five most expensive and cheapest neighborhood
-- User interface that allows users to select different neighborhood and see its average rent price
-- Interactive map with color legends represent average rent price of each neighborhood and the neighborhood group it belongs to
-
-### Use Case 3: Mapping average guests' rating by neighborhood on Seattle
+### Use Case 2: Mapping average guests' rating by neighborhood on Seattle
 #### Components
 - Database with average guests' ratings by neighborhood
 - Display the ranking of average guests' ratings by neighborhood groups and top five most highly rated and poorly rated neighborhood
 - User interface that allows users to select different neighborhood and see its average guests' ratings
 - Interactive map with color legends represent average guests' ratings of each neighborhood and the neighborhood group it belongs to
+
+### Use Case 3: Mapping price data by neighborhood on Seattle area
+#### Components
+- Database with average rent price by neighborhood
+- Display the ranking of average rent price by neighborhood groups and top five most expensive and cheapest neighborhood
+- User interface that allows users to select different neighborhood and see its average rent price
+- Interactive map with color legends represent average rent price of each neighborhood and the neighborhood group it belongs to
 
 ### Use Case 4: Get predicted price by entering housing features
 #### Components

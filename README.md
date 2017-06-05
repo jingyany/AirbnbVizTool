@@ -1,6 +1,6 @@
 ![alt text](https://github.com/wangbeiqi199159/AirbnbViz/blob/master/Docs/Project_logo.png)
 
-# Crack Jet City
+# AirbnbViz
 
 # "Analysis and Visualization of Airbnb in Seattle"
 

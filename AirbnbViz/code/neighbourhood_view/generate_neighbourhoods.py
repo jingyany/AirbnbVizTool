@@ -1,6 +1,3 @@
-import pandas as pd
-import json
-
 def generate_neighbourhoods():
     data1 = pd.read_csv("../../data/listings.csv")
     data2 = pd.read_csv("../../data/listings2.csv")
@@ -77,11 +74,3 @@ def generate_neighbourhoods():
     with open('../../html/js/neighbourhoods.js', 'w') as f:
         f.write( "var neighbourhoods = " + str(data));
         f.close()
-
-
-
-def main():
-    generate_neighbourhoods()
-
-if __name__ == '__main__':
-    main()

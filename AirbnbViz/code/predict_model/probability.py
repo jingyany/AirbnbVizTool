@@ -9,13 +9,6 @@ alpha and then use logstic regression to fit the modekl.
 
 It finally generate coefficients with CSV file.
 """
-	import numpy as np 
-	import pandas as pd 
-	import sklearn
-	import sklearn.linear_model
-	import sklearn.preprocessing
-	from sklearn import  cross_validation
-	from sklearn.linear_model import  Ridge, RidgeCV, Lasso, LassoCV
 	host=pd.read_csv('host_data.csv') #load data 
 	df_host=host[['available','host_response_time','host_response_rate', 'host_acceptance_rate', 
               'host_is_superhost','host_total_listings_count','host_has_profile_pic',
@@ -72,9 +65,7 @@ It finally generate coefficients with CSV file.
     y_host=df_host_2['available'] 
     x_host=df_host_2.drop('available',axis=1)
 
-    #Univaraiate feature selecting 
-    from sklearn.feature_selection import SelectKBest
-    from  sklearn.feature_selection import chi2
+    
     test_uni=SelectKBest(score_func=chi2,k=4) 
     fit=test_uni.fit(x_host,y_host)
     np.set_printoptions(precision=3)
@@ -83,9 +74,7 @@ It finally generate coefficients with CSV file.
     print(feature[0:20,:])
 
     # Rescursive Feature Elimination
-    from sklearn.feature_selection import RFE
-    from sklearn.linear_model import LogisticRegression
-    from sklearn.model_selection import train_test_split
+    
     x_train_host, x_valid_host, y_train_host, y_valid_host= cross_validation.train_test_split(x_host, y_host, random_state=0)
 
     model_rfe=LogisticRegression()
@@ -97,7 +86,7 @@ It finally generate coefficients with CSV file.
     print('Featur Raking: %s'%fit_rfe.ranking_ )
 
     # Randomized Logistic Regression 
-    from sklearn.linear_model import  RandomizedLogisticRegression
+    
 
     clf= RandomizedLogisticRegression()
     clf.fit(x_valid_host,y_valid_host)
@@ -114,7 +103,7 @@ It finally generate coefficients with CSV file.
 
 
     #fit model with selecting featurs
-    from sklearn.model_selection import train_test_split
+   
     x_train_host, x_valid_host, y_train_host, y_valid_host= cross_validation.train_test_split(x_host_select, y_host, random_state=0)
     #use cv to find optimal labmda
     lr_cv=sklearn.linear_model.LogisticRegressionCV(penalty='l2',fit_intercept=True,tol=10e-8,max_iter=1000)

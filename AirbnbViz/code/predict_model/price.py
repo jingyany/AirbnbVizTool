@@ -4,13 +4,7 @@ This function is to generate Machiene learning model.
 It will generate file in cvs format.
 It will generate Lasso and Ridge regression Coe. 
 """
-	import numpy as np 
-	import pandas as pd 
-	import sklearn
-	import sklearn.linear_model
-	import sklearn.preprocessing
-	from sklearn import  cross_validation
-	from sklearn.linear_model import  Ridge, RidgeCV, Lasso, LassoCV
+	
 	listing=pd.read_csv('all.csv')
 	df=listing[['host_response_rate','host_response_time','host_acceptance_rate',
             'host_is_superhost','neighbourhood_group_cleansed','property_type','room_type',
@@ -59,7 +53,7 @@ It will generate Lasso and Ridge regression Coe.
     y=df3['price']
     X=df3.drop('price',axis=1)
     #split data in training and valid set 
-    from sklearn.model_selection import train_test_split
+    
     X_train, X_valid, y_train, y_valid = cross_validation.train_test_split(X, y, random_state=0)
     #standardlize the x
     scaler=sklearn.preprocessing.StandardScaler()

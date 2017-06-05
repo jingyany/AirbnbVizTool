@@ -1,4 +1,13 @@
 def generate_ranked_data():
+    """
+    This function read raw data then generates two lists of neighbourhood groups 
+    ranked by price and rating, then transform it into approriate formate used 
+    in neighbourhood_view.html
+    It generates 2 files under html.js
+    1. ranked_price_data_by_group.js
+    2. ranked_rating_data_by_group.js
+
+    """
     data1 = pd.read_csv("../../data/listings.csv")
     data2 = pd.read_csv("../../data/listings2.csv")
     neighbourhood = data1['neighbourhood_group'].tolist()

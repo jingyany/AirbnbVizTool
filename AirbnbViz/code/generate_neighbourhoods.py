@@ -1,4 +1,13 @@
 def generate_neighbourhoods():
+    """
+    This function read raw data then transform it to neighbourhoods 
+    data used in neighbourhood_view.html
+    It generated 4 files under path : html/js
+    1. ranked_rating.js
+    2. ranked_price.js
+    3. neighbourhoods.json
+    4. neighbourhoods.js
+    """
     data1 = pd.read_csv("../../data/listings.csv")
     data2 = pd.read_csv("../../data/listings2.csv")
     neighbourhood = data1['neighbourhood'].tolist()

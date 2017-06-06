@@ -95,7 +95,7 @@
 				}
 				#result_form {
 					position:absolute;
-					right:500px;
+					right:400px;
 					top:100px;
 				}
 	</style>
@@ -151,7 +151,7 @@
 			</div>
 			
 			<div>		           
-		      <button type = "button" id="click" onclick = "myclick()" >PREDICT!</button> 
+		      <button type = "button" id="click" onclick = "myclick()" style = "width:200px;height:50px;">PREDICT PRICE!</button> 
 			</div>
 		   </form>
 
@@ -160,7 +160,7 @@
 </div>
 
 <div id = "result_form">
-	<h4>Your Result:</h4>
+	<h4>Your Suggested Price:</h4>
 	<p id = "result"></p>
 </div>
 
@@ -197,7 +197,7 @@
 		var property = document.getElementById("property").value;
 		var room = document.getElementById("room").value;
 		var result = 80 + accor * 19 + bed * 12 + bath * 23;
-		document.getElementById("result").innerHTML = result;
+		document.getElementById("result").innerHTML = "$" + result;
 	}
 
 	

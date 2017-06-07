@@ -58,7 +58,8 @@ analyze-of-seattle-airbnb-hosts (master)
 |----- Docs
 |     |      Design Specification.md
 |     |      Functional Specification.md
-|     |      Logo.png
+|     |      Logo.png
+|     |      Final Presentation.pdf
 |----- AirbnbViz
 |     |   __init__.py
 |     |  

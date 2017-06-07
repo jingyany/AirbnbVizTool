@@ -48,7 +48,7 @@ The MIT License is a permissive free software license originating at the Massach
 
 The package is organized as follows:
 ```
-analyze-of-seattle-airbnb-hosts (master)
+AirbnbViz (master)
 |     .gitignore
 |     License
 |     README.md
